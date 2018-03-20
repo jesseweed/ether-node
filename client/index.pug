@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Socket + Solidity
+    style.
+      body { font: 13px Helvetica, Arial; padding: 20; }
+  body
+    #total-supply Totaly supply:
+    script(src='/socket.io/socket.io.js')
+    script.
+      setTimeout(() => {
+        // console.log('io', io)
+        let totalSupply = document.getElementById('total-supply')
+        let socket = io()
+          socket.on('connection', (sock) => {
+          console.log('socket connected!')
+        });
+        socket.on('bots:supply', (msg) => {
+          totalSupply.innerHTML = `Total supply: ${msg.data}`
+        })
+      })

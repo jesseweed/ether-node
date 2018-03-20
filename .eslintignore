@@ -1,0 +1,10 @@
+**/*{.,-}min.js
+*.hot-update.js
+*.spec.js
+*.test.js
+node_modules
+src/store
+test
+build
+bundle.js
+src/_data
